@@ -1,17 +1,19 @@
 package com.ck.mysdk;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.ck.mylibrary.base.BaseActivity;
 import com.ck.mylibrary.utils.ToastUtils;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        needImmersive=false;
+        setImmersiveStatus(R.color.color_00a5eb);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main,true);
     }
 
     public void sdk(View view) {
